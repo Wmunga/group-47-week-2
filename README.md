@@ -1,78 +1,56 @@
-# Climate Change Prediction Model
+# Climate Data ML Project (SDG 13: Climate Action)
 
-This project implements a machine learning solution to address UN Sustainable Development Goal 13: Climate Action. It uses a neural network to predict temperature trends and extreme weather events based on historical climate data.
+## Overview
+This project leverages machine learning to analyze and predict yearly average temperature changes, directly supporting the United Nations Sustainable Development Goal 13: Climate Action. By forecasting climate trends, the project aims to raise awareness and inform decision-making for a more sustainable future.
 
-## Project Overview
+## How It Works
+- Loads and preprocesses historical climate data from a CSV file.
+- Trains a linear regression model to predict future yearly average temperatures based on past trends.
+- Evaluates model performance using Mean Absolute Error (MAE) and R² score.
+- Visualizes actual vs. predicted temperature trends.
 
-The model uses supervised learning with a neural network architecture to:
-- Predict temperature trends based on historical climate data
-- Identify patterns in climate change
-- Provide insights for climate action and adaptation strategies
-
-## Features
-
-- Data preprocessing and normalization
-- Neural network model for temperature prediction
-- Model evaluation and validation
-- Visualization of predictions and trends
-- Climate change impact assessment
-
-## Installation
-
-1. Clone this repository
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## Requirements
+- Python 3.x
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
 
 ## Usage
+1. Place `data.csv` in the project folder.
+2. Run the script:
+   ```
+   python data_processor.py
+   ```
+3. View the output in your terminal and the prediction plot.
 
-1. Run the main script:
-```bash
-python climate_predictor.py
-```
+## Results
+- The model outputs MAE and R² score.
+- A plot displays predicted vs. actual yearly average temperatures.
 
-2. The script will:
-   - Download and preprocess climate data
-   - Train the neural network model
-   - Generate predictions
-   - Create visualizations
+## Ethical Reflection
+Potential bias may exist in the data due to incomplete or non-representative samples. The model is for educational purposes and should not be used for policy decisions without expert review. By making climate trends more understandable, this project supports SDG 13 (Climate Action) and promotes fairness through open data and transparent methods.
 
-## Project Structure
+## Screenshots
+*(Add screenshots of your terminal output and prediction plot here)*
 
-- `climate_predictor.py`: Main model implementation
-- `data_processor.py`: Data loading and preprocessing
-- `utils.py`: Helper functions
-- `visualization.py`: Plotting and visualization tools
-- `requirements.txt`: Project dependencies
+---
 
-## Model Architecture
+## 1-Page Project Summary
 
-The neural network model consists of:
-- Input layer: Historical climate data features
-- Hidden layers: Multiple dense layers with ReLU activation
-- Output layer: Temperature predictions
-- Loss function: Mean Squared Error
-- Optimizer: Adam
+**SDG Problem Addressed:**  
+Climate change (SDG 13: Climate Action) — Predicting yearly average temperature changes to inform and raise awareness about global warming trends.
 
-## Data Sources
+**ML Approach Used:**  
+Supervised learning with linear regression to forecast future temperature trends based on historical data.
 
-The model uses historical climate data from reliable sources, including:
-- Temperature records
-- Atmospheric CO2 levels
-- Sea level measurements
-- Other relevant climate indicators
+**Results:**  
+- Model achieved MAE of *X.XXXX* and R² of *X.XXXX* (replace with your actual results).
+- Visualization shows predicted vs. actual temperature trends, highlighting the model’s ability to capture climate patterns.
 
-## Contributing
+**Ethical Considerations:**  
+- Data bias may affect predictions if the dataset is incomplete or not globally representative.
+- The model is transparent and uses open data.
+- Promotes climate awareness and supports sustainability by making climate data accessible and understandable.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- UN Sustainable Development Goals
-- Climate science community
-- Open-source machine learning community 
+---

@@ -2,11 +2,15 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, r2_score
+import matplotlib.pyplot as plt
 import re
 
 class ClimateDataProcessor:
     def __init__(self):
-        self.scaler = MinMaxScaler()
+        self.x_scaler = MinMaxScaler()
+        self.y_scaler = MinMaxScaler()
         self.data = None
         self.X_train = None
         self.X_test = None
@@ -94,11 +98,11 @@ class ClimateDataProcessor:
             y.append(self.data[target_column].iloc[i + sequence_length])
             
         X = np.array(X)
-        y = np.array(y)
+        y = np.array(y).reshape(-1, 1)
         
-        # Scale the data
-        X = self.scaler.fit_transform(X)
-        y = self.scaler.transform(y.reshape(-1, 1))
+        # Scale the data with separate scalers
+        X = self.x_scaler.fit_transform(X)
+        y = self.y_scaler.fit_transform(y)
         
         # Split the data
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
@@ -106,7 +110,13 @@ class ClimateDataProcessor:
         )
         
         return self.X_train, self.X_test, self.y_train, self.y_test
-    
+
+    def inverse_transform_y(self, data):
+        """
+        Convert scaled target data back to original scale
+        """
+        return self.y_scaler.inverse_transform(data)
+
     def inverse_transform(self, data):
         """
         Convert scaled data back to original scale
@@ -117,4 +127,37 @@ class ClimateDataProcessor:
         """
         Return the names of the features used in the model
         """
-        return ['Temperature'] 
+        return ['Temperature']
+
+if __name__ == "__main__":
+    processor = ClimateDataProcessor()
+    data = processor.load_climate_data()
+    if data is not None:
+        print("First 5 rows of processed data:")
+        print(data.head())
+        X_train, X_test, y_train, y_test = processor.prepare_data()
+
+        # Train a regression model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+
+        # Evaluate the model
+        mae = mean_absolute_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
+        print(f"Mean Absolute Error (MAE): {mae:.4f}")
+        print(f"R^2 Score: {r2:.4f}")
+
+        # Visualize predictions vs actual
+        plt.figure(figsize=(10, 5))
+        plt.plot(y_test, label='Actual')
+        plt.plot(y_pred, label='Predicted')
+        plt.xlabel('Sample')
+        plt.ylabel('Scaled Yearly Avg Temp')
+        plt.legend()
+        plt.title("Actual vs Predicted Yearly Avg Temperature")
+        plt.show()
+        plt.savefig("prediction_plot.png")
+    else:
+        print("Data could not be loaded.")
+
