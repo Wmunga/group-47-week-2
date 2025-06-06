@@ -29,10 +29,10 @@ This project leverages machine learning to analyze and predict yearly average te
 - A plot displays predicted vs. actual yearly average temperatures.
 
 ## Ethical Reflection
-Potential bias may exist in the data due to incomplete or non-representative samples. The model is for educational purposes and should not be used for policy decisions without expert review. By making climate trends more understandable, this project supports SDG 13 (Climate Action) and promotes fairness through open data and transparent methods.
+Potential bias may exist in the data due to incomplete or non-representative samples. The model is for educational purposes and should not be used for policy decisions without expert review. By making climate trends more understandable, this project supports SDG 13 (Climate Action) and promotes fairness through open data and transparent methods
 
 ## Screenshots
-*(Add screenshots of your terminal output and prediction plot here)*
+![Prediction Plot](prediction_plot.png)
 
 ---
 
@@ -45,7 +45,7 @@ Climate change (SDG 13: Climate Action) — Predicting yearly average temperatur
 Supervised learning with linear regression to forecast future temperature trends based on historical data.
 
 **Results:**  
-- Model achieved MAE of *X.XXXX* and R² of *X.XXXX* (replace with your actual results).
+- Model achieved MAE of 0.0516 and R² 0.9271.
 - Visualization shows predicted vs. actual temperature trends, highlighting the model’s ability to capture climate patterns.
 
 **Ethical Considerations:**  
