@@ -34,7 +34,6 @@ Potential bias may exist in the data due to incomplete or non-representative sam
 ## Screenshots
 ![Prediction Plot](prediction_plot.png)
 
----
 
 ## 1-Page Project Summary
 

@@ -1,6 +1,0 @@
-# Ethical Reflection:
-# This project uses historical climate data to predict yearly average temperatures.
-# Potential bias may arise if the dataset is incomplete or not representative of global trends.
-# The model's predictions should not be used for policy decisions without expert review.
-# By making climate trends more understandable, this project supports SDG 13 (Climate Action).
-# Fairness is promoted by using open data and transparent methods.
