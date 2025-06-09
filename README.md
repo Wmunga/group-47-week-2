@@ -4,29 +4,20 @@
 
 
 # Climate Prediction using LSTM (SDG 13: Climate Action)
-=======
-Group 47
 
-# Climate Data ML Project (SDG 13: Climate Action)
->>>>>>> c743fbeb980f3311c016c7779cdeac6e429c11f2
+
 
 ## Overview
 This project uses deep learning (LSTM neural networks) to analyze and predict climate trends, supporting the United Nations Sustainable Development Goal 13: Climate Action. By forecasting temperature changes with advanced machine learning techniques, the project aims to provide insights into climate patterns and contribute to climate action awareness.
 
 ## Project Structure
-The project is organized into three Jupyter notebooks:
-
-1. `data_processing.ipynb`
+The project is organized into a README file and a Jupyter notebook that works on:
    - Data loading and preprocessing
    - Sequence creation for time series prediction
    - Data scaling and splitting
-
-2. `climate_predictor.ipynb`
    - LSTM model implementation
    - Model training and evaluation
    - Future temperature predictions
-
-3. `visualization.ipynb`
    - Interactive data visualization
    - Model performance analysis
    - Temperature trend analysis
@@ -54,16 +45,9 @@ The project is organized into three Jupyter notebooks:
 
 ## Usage
 1. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
 
-2. Open the notebooks in order:
-   - First, run `data_processing.ipynb` to load and prepare the data
-   - Then, run `climate_predictor.ipynb` to train and evaluate the model
-   - Finally, use `visualization.ipynb` for detailed analysis
 
-3. Each notebook can be run in Cursor.ai with the Jupyter extension or in any Jupyter environment
+3. Each notebook can be run in VSCode with the Jupyter extension or in any Jupyter environment
 
 ## Model Architecture
 The project uses a sophisticated LSTM (Long Short-Term Memory) neural network with:
