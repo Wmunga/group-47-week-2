@@ -1,57 +1,113 @@
+<<<<<<< HEAD
+
+# group 47
+
+
+# Climate Prediction using LSTM (SDG 13: Climate Action)
+=======
 Group 47
 
 # Climate Data ML Project (SDG 13: Climate Action)
+>>>>>>> c743fbeb980f3311c016c7779cdeac6e429c11f2
 
 ## Overview
-This project leverages machine learning to analyze and predict yearly average temperature changes, directly supporting the United Nations Sustainable Development Goal 13: Climate Action. By forecasting climate trends, the project aims to raise awareness and inform decision-making for a more sustainable future.
+This project uses deep learning (LSTM neural networks) to analyze and predict climate trends, supporting the United Nations Sustainable Development Goal 13: Climate Action. By forecasting temperature changes with advanced machine learning techniques, the project aims to provide insights into climate patterns and contribute to climate action awareness.
 
-## How It Works
-- Loads and preprocesses historical climate data from a CSV file.
-- Trains a linear regression model to predict future yearly average temperatures based on past trends.
-- Evaluates model performance using Mean Absolute Error (MAE) and R² score.
-- Visualizes actual vs. predicted temperature trends.
+## Project Structure
+The project is organized into three Jupyter notebooks:
+
+1. `data_processing.ipynb`
+   - Data loading and preprocessing
+   - Sequence creation for time series prediction
+   - Data scaling and splitting
+
+2. `climate_predictor.ipynb`
+   - LSTM model implementation
+   - Model training and evaluation
+   - Future temperature predictions
+
+3. `visualization.ipynb`
+   - Interactive data visualization
+   - Model performance analysis
+   - Temperature trend analysis
+
+## Features
+- Advanced LSTM-based deep learning model for time series prediction
+- Interactive data visualization and analysis
+- Monthly and yearly temperature trend analysis
+- Future temperature predictions
+- Model performance metrics and visualizations
 
 ## Requirements
 - Python 3.x
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
+- Jupyter Notebook
+- Required packages (install via `pip install -r requirements.txt`):
+  - numpy>=1.21.0
+  - pandas>=1.3.0
+  - scikit-learn>=0.24.2
+  - tensorflow>=2.16.1
+  - matplotlib>=3.4.3
+  - seaborn>=0.11.2
+  - jupyter>=1.0.0
+  - ipykernel>=6.0.0
+  - nbconvert>=7.0.0
 
 ## Usage
-1. Place `data.csv` in the project folder.
-2. Run the script:
+1. Install the required packages:
    ```
-   python data_processor.py
+   pip install -r requirements.txt
    ```
-3. View the output in your terminal and the prediction plot.
+
+2. Open the notebooks in order:
+   - First, run `data_processing.ipynb` to load and prepare the data
+   - Then, run `climate_predictor.ipynb` to train and evaluate the model
+   - Finally, use `visualization.ipynb` for detailed analysis
+
+3. Each notebook can be run in Cursor.ai with the Jupyter extension or in any Jupyter environment
+
+## Model Architecture
+The project uses a sophisticated LSTM (Long Short-Term Memory) neural network with:
+- Multiple LSTM layers with dropout for regularization
+- Dense layers for final predictions
+- Sequence-based input for time series prediction
+- MinMaxScaler for data normalization
 
 ## Results
-- The model outputs MAE and R² score.
-- A plot displays predicted vs. actual yearly average temperatures.
+- Interactive visualizations of temperature trends
+- Model performance metrics (MAE, Loss)
+- Future temperature predictions
+- Monthly and yearly temperature analysis
+- Correlation analysis between different months
 
-## Ethical Reflection
-Potential bias may exist in the data due to incomplete or non-representative samples. The model is for educational purposes and should not be used for policy decisions without expert review. By making climate trends more understandable, this project supports SDG 13 (Climate Action) and promotes fairness through open data and transparent methods
+## Ethical Considerations
+- The model is trained on historical data and may not account for future climate changes
+- Predictions should be used for educational and awareness purposes
+- Data transparency and model interpretability are maintained
+- Regular updates and validation are recommended
+- The project promotes climate awareness through accessible data visualization
 
 ## Screenshots
 ![Prediction Plot](prediction_plot.png)
 
-
 ## 1-Page Project Summary
 
 **SDG Problem Addressed:**  
-Climate change (SDG 13: Climate Action) — Predicting yearly average temperature changes to inform and raise awareness about global warming trends.
+Climate change (SDG 13: Climate Action) — Using advanced LSTM neural networks to predict temperature trends and raise awareness about climate change.
 
 **ML Approach Used:**  
-Supervised learning with linear regression to forecast future temperature trends based on historical data.
+Deep learning with LSTM networks for time series prediction, providing more sophisticated analysis than traditional methods.
 
 **Results:**  
-- Model achieved MAE of 0.0516 and R² 0.9271.
-- Visualization shows predicted vs. actual temperature trends, highlighting the model’s ability to capture climate patterns.
+- Interactive visualizations of temperature trends
+- Future temperature predictions
+- Comprehensive analysis of monthly and yearly patterns
+- Model performance tracking with loss and MAE metrics
 
 **Ethical Considerations:**  
-- Data bias may affect predictions if the dataset is incomplete or not globally representative.
-- The model is transparent and uses open data.
-- Promotes climate awareness and supports sustainability by making climate data accessible and understandable.
+- Transparent data processing and model architecture
+- Educational focus on climate awareness
+- Regular model validation and updates recommended
+- Open-source implementation for community contribution
+- Emphasis on data visualization for better understanding
 
 ---
